@@ -8,9 +8,8 @@ namespace PII_Game_Of_Life
         {
             LeerArchivo archivo = new LeerArchivo(@"../../assets/board.txt");
             LogicaJuego juego = new LogicaJuego(archivo);
-            Tablero tablero = new Tablero(juego);
-            tablero.Jugar();
-            
+            Tablero board = new Tablero(juego);
+            board.Jugar(juego);
         }
     }
 }

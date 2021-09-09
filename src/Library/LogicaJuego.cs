@@ -7,17 +7,17 @@ namespace PII_Game_Of_Life
 {
     public class LogicaJuego
     {
-        public  bool[,] GameBoard {get; set;}
-        public  int BoardWidth {get; set; }
+        public bool[,] GameBoard {get; set;}
+        public int BoardWidth {get; set; }
         public int BoardHeight {get; set;}
-        public  bool[,] Cloneboard {get; set;}
+        public bool[,] Cloneboard {get; set;}
 
         public  LogicaJuego(LeerArchivo board)
         {
             this.GameBoard = board.Board;
-            this.BoardWidth = this.GameBoard.GetLength(0);
-            this.BoardHeight = this.GameBoard.GetLength(1);
-            this.Cloneboard = new bool[this.BoardWidth, this.BoardHeight];
+            this.BoardWidth = GameBoard.GetLength(0);
+            this.BoardHeight = GameBoard.GetLength(1);
+            this.Cloneboard = new bool[BoardWidth,BoardHeight];
         }    
 
 

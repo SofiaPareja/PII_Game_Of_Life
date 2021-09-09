@@ -13,16 +13,16 @@ namespace PII_Game_Of_Life
         public  bool[,] b {get; set;}
         public  int Width {get; set;}
         public  int Height {get; set;}
-        public LogicaJuego Juego {get;set;}
+        
         public Tablero(LogicaJuego juego)
         {
-            this.Juego = juego;
             this.b = juego.GameBoard;
             this.Width = juego.BoardWidth;
             this.Height = juego.BoardHeight;
         }
-        public void Jugar()
+        public void Jugar(LogicaJuego juego)
         {
+
             while (true)
             {
                 Console.Clear();
@@ -43,7 +43,7 @@ namespace PII_Game_Of_Life
                     s.Append("\n");
                 }
                 Console.WriteLine(s.ToString());
-                this.Juego.Juego();
+                juego.Juego();
                 Thread.Sleep(300);
             }
         }    
