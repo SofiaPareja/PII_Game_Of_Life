@@ -6,7 +6,11 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LeerArchivo archivo = new LeerArchivo(@"../../assets/board.txt");
+            LogicaJuego juego = new LogicaJuego(archivo);
+            Tablero tablero = new Tablero(juego);
+            tablero.Jugar();
+            
         }
     }
 }
